@@ -1,0 +1,36 @@
+CC := cc
+CFLAGS := -Wall -Wextra #-Werror -g
+LDFLAGS = -lncursesw -lm
+
+NAME := pong
+
+OUTPUT_DIR := output
+
+SRC_DIR := src
+
+SRC := $(SRC_DIR)/main.c
+
+INCLUDES := includes
+
+OBJ := $(SRC:$(SRC_DIR)/%.c=$(OUTPUT_DIR)/%.o)
+
+$(NAME): $(OUTPUT_DIR) $(OBJ)
+	$(CC) $(OBJ) $(CFLAGS) $(LDFLAGS) -o $@
+
+$(OUTPUT_DIR):
+	mkdir -p $(OUTPUT_DIR)
+
+$(OUTPUT_DIR)/%.o: $(SRC_DIR)/%.c
+	$(CC) -o $@ -c $< $(CFLAGS) -I$(INCLUDES)
+
+all: $(NAME)
+
+clean:
+	rm -rf $(OUTPUT_DIR)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all
+
+.PHONY: clean all re fclean
