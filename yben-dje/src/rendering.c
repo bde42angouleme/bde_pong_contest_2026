@@ -6,7 +6,7 @@
 /*   By: yben-dje <yben-dje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 17:33:08 by yben-dje          #+#    #+#             */
-/*   Updated: 2026/04/26 17:33:53 by yben-dje         ###   ########.fr       */
+/*   Updated: 2026/04/26 21:19:41 by yben-dje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 static void	draw_pad(WINDOW *win, int x, float y)
 {
 	char *const	parts[] = {" ", "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"};
-	char	*c;
-	int		grid_y;
+	char		*c;
+	int			grid_y;
 
 	y += 1.0;
 	y /= 2.0;

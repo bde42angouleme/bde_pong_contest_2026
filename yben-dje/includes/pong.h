@@ -6,7 +6,7 @@
 /*   By: yben-dje <yben-dje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 17:09:44 by yben-dje          #+#    #+#             */
-/*   Updated: 2026/04/26 17:29:15 by yben-dje         ###   ########.fr       */
+/*   Updated: 2026/04/26 21:02:01 by yben-dje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,6 @@ typedef struct s_pong
 	t_pad			left_pad;
 	t_pad			right_pad;
 	t_input_keys	input;
-	double			old_time;
-	double			new_time;
 	double			delta;
 }					t_pong;
 
@@ -80,5 +78,6 @@ void				reset(t_ball *ball, t_pad *left_pad, t_pad *right_pad,
 						t_input_keys *input);
 void				setup_curses(WINDOW **win);
 float				get_time(void);
+int					max(int a, int b);
 
 #endif

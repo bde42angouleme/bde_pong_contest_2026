@@ -6,7 +6,7 @@
 /*   By: yben-dje <yben-dje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 17:14:18 by yben-dje          #+#    #+#             */
-/*   Updated: 2026/04/26 17:29:30 by yben-dje         ###   ########.fr       */
+/*   Updated: 2026/04/26 20:55:36 by yben-dje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,6 @@ void	handle_physic(t_pong *pong)
 {
 	int	state;
 
-	pong->new_time = get_time();
-	pong->delta = pong->new_time - pong->old_time;
-	pong->old_time = pong->new_time;
 	pong->input.up_delay -= pong->delta;
 	pong->input.down_delay -= pong->delta;
 	pong->input.e_delay -= pong->delta;

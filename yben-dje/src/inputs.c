@@ -6,7 +6,7 @@
 /*   By: yben-dje <yben-dje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 17:12:20 by yben-dje          #+#    #+#             */
-/*   Updated: 2026/04/26 17:35:56 by yben-dje         ###   ########.fr       */
+/*   Updated: 2026/04/26 21:19:08 by yben-dje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	handle_keys(WINDOW *win, bool *running, t_input_keys *input)
 {
 	int		key;
 	bool	states[4];
-	
+
 	memset(states, 0, 4 * sizeof(bool));
 	key = 0;
 	while (key != ERR)
