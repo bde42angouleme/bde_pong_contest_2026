@@ -6,7 +6,7 @@
 /*   By: yben-dje <yben-dje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 17:13:44 by yben-dje          #+#    #+#             */
-/*   Updated: 2026/04/26 17:29:49 by yben-dje         ###   ########.fr       */
+/*   Updated: 2026/04/26 21:38:24 by yben-dje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,12 @@ void	setup_curses(WINDOW **win)
 	curs_set(0);
 	refresh();
 	*win = newwin(WIN_HEIGHT / 2, WIN_WIDTH, 1, 1);
+	if (!*win)
+	{
+		delwin(stdscr);
+		endwin();
+		exit(1);
+	}
 	box(*win, 0, 0);
 	wrefresh(*win);
 	keypad(*win, TRUE);
