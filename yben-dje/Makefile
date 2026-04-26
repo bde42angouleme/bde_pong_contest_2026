@@ -8,7 +8,7 @@ OUTPUT_DIR := output
 
 SRC_DIR := src
 
-SRC := $(SRC_DIR)/main.c
+SRC := $(SRC_DIR)/main.c $(SRC_DIR)/inputs.c $(SRC_DIR)/physic.c $(SRC_DIR)/rendering.c $(SRC_DIR)/setup.c $(SRC_DIR)/utils.c
 
 INCLUDES := includes
 
