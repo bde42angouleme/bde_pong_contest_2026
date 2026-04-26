@@ -1,5 +1,5 @@
 CC := cc
-CFLAGS := -Wall -Wextra #-Werror -g
+CFLAGS := -Wall -Wextra -Werror
 LDFLAGS = -lncursesw -lm
 
 NAME := pong
